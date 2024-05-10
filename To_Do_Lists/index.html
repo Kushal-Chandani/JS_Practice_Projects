@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enhanced To-Do List</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>My To-Do List</h1>
+    <div class="tabs">
+        <button class="tab-link active" onclick="filterTasks('all')">All</button>
+        <button class="tab-link" onclick="filterTasks('personal')">Personal</button>
+        <button class="tab-link" onclick="filterTasks('work')">Work</button>
+    </div>
+    <input type="text" id="taskInput" placeholder="Add new task...">
+    <select id="taskType">
+        <option value="personal">Personal</option>
+        <option value="work">Work</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+    <select id="sortMethod">
+        <option value="time">Sort by Time</option>
+        <option value="alphabetical">Sort Alphabetically</option>
+    </select>
+    <button onclick="sortTasks()">Sort Tasks</button>
+    <ul id="taskList"></ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
